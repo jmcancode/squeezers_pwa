@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import {NavLink} from 'react-router-dom'
 // custom css
 import "../Footer/Footer.css"
@@ -7,11 +7,9 @@ import {AiFillFacebook, AiFillInstagram, AiFillTwitterSquare} from 'react-icons/
 
 export default function Footer() {
     return (
-       <>
-        
-        <div className="Footer-Wrapper">
-            <nav>
-                <ul>
+        <Fragment>
+            <nav className="footerWrapper">
+                <nav className='one'>
                     <div
                         style={{
                         display: "flex",
@@ -19,8 +17,15 @@ export default function Footer() {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}>
-                        <p className="text-white">Download the App</p>
-                        <div style={{display: 'inherit', justifyContent: 'space-around', alignItems: 'center', gap: '15px'}}>
+                        <p className='text-white'>Download the App</p>
+                        <div
+                            style={{
+                            display: 'flex',
+                            flexDirection: "row",
+                            justifyContent: 'space-around',
+                            alignItems: 'center',
+                            gap: '15px'
+                        }}>
                             <div>
                                 <p className='text-white'>iOS</p>
                             </div>
@@ -29,8 +34,9 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                </ul>
-                <ul>
+                </nav>
+                <nav className='two'>
+
                     <div
                         style={{
                         display: "flex",
@@ -59,15 +65,17 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                </ul>
-                <ul>
+
+                </nav>
+
+                <nav className='three'>
+
                     <div
                         style={{
                         display: "flex",
                         flexDirection: "row",
-                        justifyContent: "center",
-                        alignItems: 'center',
-                        gap: '20px'
+                        justifyContent: "space-around",
+                        alignItems: 'flex-start'
                     }}>
                         <li>
                             <NavLink className="footerLinks" to="/welcome">our story</NavLink>
@@ -85,8 +93,13 @@ export default function Footer() {
                             <NavLink className="footerLinks" to="/welcome">FAQ</NavLink>
                         </li>
                     </div>
-                </ul>
+
+                </nav>
+                <nav className='four'>
+                    <p>2022 All Rights Reserved Squuezers Co.</p>
+                </nav>
             </nav>
-        </div></>
+
+        </Fragment>
     )
 }

@@ -1,25 +1,77 @@
-
-
-.Footer-Wrapper {
+.footerWrapper {
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(50px, auto);
+    column-gap: 10px;
+    row-gap: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    background-image: url('../../assets/naviBack.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30vh;
+    padding-top: 3%;
+}
+
+.one {
+    grid-column: 1;
+    grid-row: 1;
+}
+.two {
+    grid-column: 2;
+    grid-row: 1;
+}
+.three {
+    grid-column: 3/6;
+    grid-row: 1;
+}
+.four {
+    grid-column: 1/6;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.four p {
+    color: #fff;
+    font-size: 12px;
 }
 
 li {
     list-style: none;
-
 }
 
 .footerLinks {
     color: #fff;
     text-decoration: none;
 }
+.footerLinks:hover {
+    color: #1c2450;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+}
 
 .btn-dark {
     background-color: #1c2450;
 }
-
 .btn-dark:hover {
-    background-color: #fff !important;
-    color: #1c2450 !important;
-    border-color: transparent !important;
+    background-color: #1c2450;
+    color: #fff;
+    border-color: transparent;
 }
+
+/* small devices */
+@media(min-width: 576px) {}
+/* Medium devices */
+@media(min-width: 768px) {}
+/* Large devices */
+@media(min-width: 992px) {}
+/* X-Large devices */
+@media(min-width: 1200px) {}
+/* XX-Large devices */
+@media(min-width: 1400px) {}

@@ -17,49 +17,49 @@ function GlobalState(props) {
         id: "p2",
         title: "The Martian",
         imgPath: "../assets/SAPunch.png",
-        "bio": "Lorem Ipsum",
+        "bio": "romaine, apple, lime",
         price: 7.00
     }, {
         id: "p3",
         title: "Love Potion",
         imgPath: "../assets/SAPunch.png",
-        "bio": "Lorem Ipsum",
+        "bio": "beet, strawberries and watermelon",
         price: 7.00
     }, {
         id: "p4",
         title: "Valley Girl",
         imgPath: "../assets/SAPunch.png",
-        "bio": "Lorem Ipsum",
+        "bio": "lemon, lime, grapefruit, orange, pineapple",
         price: 7.00
     }, {
         id: "p5",
         title: "SA Punch",
         imgPath: "../assets/SAPunch.png",
-        "bio": "Lorem Ipsum",
+        "bio": "watermelon, pineapple, grapefruit, ginger, beets",
         price: 7.00
     }, {
         id: "p6",
         title: "Tanga",
         imgPath: "../assets/SAPunch.png",
-        "bio": "Lorem Ipsum",
+        "bio": "pineapple, cucumber, lime",
         price: 7.00
     }, {
         id: "p7",
         title: "Summer Water",
         imgPath: "../assets/SAPunch.png",
-        "bio": "Lorem Ipsum",
+        "bio": "pineapple, watermelon, mint",
         price: 7.00
     }, {
         id: "p8",
         title: "The Money",
         imgPath: "../assets/SAPunch.png",
-        "bio": "Lorem Ipsum",
+        "bio": "kale, ginger, apple",
         price: 7.00
     }, {
         id: "p9",
         title: "Slim Thick",
         imgPath: "../assets/SAPunch.png",
-        "bio": "Lorem Ipsum",
+        "bio": "Pineapple, Banana, and Oat Milk base. (Pineapple Juice base per request)",
         price: 7.00
     }, {
         id: "p10",

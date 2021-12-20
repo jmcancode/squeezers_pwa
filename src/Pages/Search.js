@@ -96,91 +96,92 @@ const product = [
 export default function Search() {
     const [searchTerm,
         setSearchTerm] = useState('');
-    const [searchShow, setSearchShow] = useState(false);
+    const [searchShow,
+        setSearchShow] = useState(false);
 
-const filteredProduct = product.filter(
-    product => {
-        return (
-            product.title.toLowerCase().includes(searchTerm.toLowerCase()) || product.bio.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-    }
-)
+    const filteredProduct = product.filter(product => {
+        return (product.title.toLowerCase().includes(searchTerm.toLowerCase()) || product.bio.toLowerCase().includes(searchTerm.toLowerCase()))
+    })
 
-const handleChange = e => {
-    setSearchTerm(e.target.value);
-    if(e.target.value===""){
-        setSearchShow(false)
+    const handleChange = e => {
+        setSearchTerm(e.target.value);
+        if (e.target.value === "") {
+            setSearchShow(false)
+        } else {
+            setSearchShow(true)
+        }
     }
-    else {
-        setSearchShow(true)
-    }
-}
-
 
     return (
         <ShopContext.Consumer>
             {context => (
                 <Fragment >
-                <MainNavigation cartItemNumber={context
+                    <div>
+                        <MainNavigation
+                            cartItemNumber={context
                             .cart
                             .reduce((count, curItem) => {
                                 return count + curItem.quantity;
                             }, 0)}/>
+                    </div>
                     <div className="search-wrapper">
                         <input
-                        className='search'
+                            className='search'
                             type="text"
                             placeholder='search names or ingredients'
                             value={searchTerm}
                             onChange={handleChange}
-                            style={{width :'100%'}}
-                            />
+                            style={{
+                            width: '100%'
+                        }}/>
                     </div>
-                    <div
-                        className="list"
-                        style={{
-                        backgroundColor: "#fff",
-                        width: '100vw',
-                        height: '100%'
-                    }}>
-                        <div
-                            className='results' 
-                           >
+                    <div className="list">
+                        <div className='results'>
                             {filteredProduct.map(product => (
-                                <>
+                                <Fragment>
                                     <div className="cardWrapper" key={product.id}>
                                         <Card
+                                            className='text-center'
                                             style={{
                                             padding: '10px',
                                             margin: '5px',
-                                            width: '20%'
+                                            width: '100%',
+                                            height: '100%',
+                                            borderColor: 'transparent'
                                         }}>
-                                            <Card.Header className="text-center">
-                                                <h5 className="text-grey">{product.title}</h5>
-                                            </Card.Header>
-                                            <Card.Img src={process.env.PUBLIC_URL + product.imgPath} variant="top" alt={product.imgPath} style={{display: "block", width: "100%"}}/>
+                                            <Card.Img
+                                                src={process.env.PUBLIC_URL + product.imgPath}
+                                                variant="top"
+                                                alt={product.imgPath}
+                                                style={{
+                                                display: "block",
+                                                width: "100%"
+                                            }}/>
                                             <Card.Body>
+                                                <h5>{product.title}</h5>
                                                 <p className="text-black">{product.bio}</p>
                                             </Card.Body>
                                             <Card.Footer
                                                 style={{
                                                 display: 'flex',
                                                 flexDirection: "row",
-                                                justifyContent: "space-around",
-                                                alignItems: "center"
+                                                justifyContent: "space-between",
+                                                alignItems: "center",
+                                                backgroundColor: "transparent",
+                                                borderTopColor: "transparent"
                                             }}>
-                                                <small className="text-grey">${product.price}.00</small>
-                                                <button 
-                                                 onClick={context
+                                                <button className='btn btn-dark'>more info</button>
+                                                <button
+                                                    onClick={context
                                                     .addProductToCart
                                                     .bind(this, product)}className="btn btn-dark">
                                                     Add to Cart
                                                 </button>
-    
+
                                             </Card.Footer>
                                         </Card>
                                     </div>
-                                </>
+                                </Fragment>
                             ))}
                         </div>
                     </div>

@@ -1,28 +1,25 @@
 .search-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    padding: 20px;
 }
 
-
 .search {
-    margin: 5px;
-    margin-top: 2%;
-    
+    margin: 2% 5px 5px;
 }
 
 .results {
-    display: inline;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(autofill, auto);
+    gap: 30px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    background-color: transparent;
+}
+
+.list {
 }
 
 
-.list{
-    
-    background-color: #fff;
-}
-
-.cardWrapper {
-    
+.cardWrapper{
+    padding: 100px
 }

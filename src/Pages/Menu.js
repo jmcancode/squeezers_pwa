@@ -16,7 +16,7 @@ function ProductsPage(props) {
                         .reduce((count, curItem) => {
                             return count + curItem.quantity;
                         }, 0)}/>
-                    <main>
+                    <main style={{paddingTop: '8%'}}>
                         <div className="products">
                             {context
                                 .products
@@ -26,7 +26,7 @@ function ProductsPage(props) {
                                             key={product.id}
                                             className="text-center border-0"
                                             style={{
-                                            padding: '55px'
+                                            padding: '55px', backgroundColor: "transparent"
                                         }}>
                                             <Card.Img src={product.imgPath} alt={product.imgPath} variant='top' className="cardImg"/>
                                             <Card.Body className="cardBody">

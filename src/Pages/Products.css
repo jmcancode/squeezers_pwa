@@ -1,26 +1,16 @@
-
-
 .products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(auto-fill, auto);
-    padding: 150px;
-    grid-row-gap: .5em;
-  grid-column-gap: 1em;
-}
-
-.products ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    grid-template-rows: repeat(auto-fill, auto);    
+    padding: 10% 5%;
+    background-color: #fff;
+    
 }
 
 .products li {
-
     border: 5px solid transparent;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -48,3 +38,15 @@
     background-color: #d6d6d7;
     color: #1c2450;
 }
+
+
+/* small devices */
+@media(min-width: 576px){}
+/* Medium devices */
+@media(min-width: 768px){}
+/* Large devices */
+@media(min-width: 992px){}
+/* X-Large devices */
+@media(min-width: 1200px){}
+/* XX-Large devices */
+@media(min-width: 1400px){}
