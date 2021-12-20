@@ -8,6 +8,7 @@ import GlobalState from "./context/GlobalState"
 import ProductsPage from "./Pages/Menu"
 import CartPage from "./Pages/Cart"
 import Search from './Pages/Search';
+import WelcomePage from './Pages/Welcome';
 
 
 function App() {
@@ -15,9 +16,14 @@ function App() {
         <GlobalState>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/welcome" element={< ProductsPage />} exact/>
+                    <Route path="/welcome" element={<WelcomePage/> } exact/>
+                    <Route path="/menu" element={< ProductsPage />} exact/>
                     <Route path="/cart" element={< CartPage />} exact/>
                     <Route path="/search" element={< Search />} exact/>
+                    {/* rewards */}
+                    {/* delivery */}
+                    {/* profile */}
+                    {/* 404 */}
                 </Routes>
             </BrowserRouter>
         </GlobalState>

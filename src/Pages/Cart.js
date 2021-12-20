@@ -5,9 +5,7 @@ import MainNavigation from "../components/MainNavigation";
 import "./Cart.css";
 import Footer from "../components/Footer/Footer";
 import {NavLink} from "react-router-dom";
-import {BiTrash}  from 'react-icons/bi'
-
-
+import {BiTrash} from 'react-icons/bi'
 
 function CartPage(props) {
     const context = useContext(ShopContext);
@@ -27,39 +25,54 @@ function CartPage(props) {
             <main className="cart">
 
                 {context.cart.length <= 0 && <Fragment>
-                    <div style={{height: "100%", display: 'flex', flexDirection:'column', justifyContent: 'center', alignItems: "center"}}>
+                    <div
+                        style={{
+                        height: "100%",
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: "center"
+                    }}>
                         <p>Your cart is empty 🙁</p>
                         <button className="btn btn-dark">
-                          <NavLink style={{textDecoration: "none", color:"#fff"}} to="/welcome">
-                            Explore our menu
-                          </NavLink>
+                            <NavLink
+                                style={{
+                                textDecoration: "none",
+                                color: "#fff"
+                            }}
+                                to="/welcome">
+                                Explore our menu
+                            </NavLink>
                         </button>
                     </div>
                 </Fragment>
 }
+                <div style={{padding: '20px',}}>
+                    <div>
+                        {context
+                            .cart
+                            .map((cartItem) => (
+                                <li key={cartItem.id}>
+                                    <div>
+                                        <strong>{cartItem.title}</strong>
+                                         - ${cartItem.price}
+                                        ( {cartItem.quantity})
+                                    </div>
+                                    <div>
+                                        <button
+                                            className="btn btn-danger"
+                                            onClick={context
+                                            .removeProductFromCart
+                                            .bind(this, cartItem.id)}>
+                                            <BiTrash size={25} color="#fff"/>
+                                        </button>
+                                    </div>
 
-                <ul>
-                    {context
-                        .cart
-                        .map((cartItem) => (
-                            <li key={cartItem.id}>
-                                <div>
-                                    <strong>{cartItem.title}</strong>
-                                    - ${cartItem.price}
-                                    ( {cartItem.quantity})
-                                </div>
-                                <div>
-                                    <button
-                                    className="btn btn-danger"
-                                        onClick={context
-                                        .removeProductFromCart
-                                        .bind(this, cartItem.id)}>
-                                        <BiTrash size={25} color="#fff"/>
-                                    </button>
-                                </div>
-                            </li>
-                        ))}
-                </ul>
+                                </li>
+                            ))}
+                    </div>
+                </div>
+
             </main>
             <Footer/>
         </React.Fragment>

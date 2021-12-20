@@ -9,85 +9,85 @@ const product = [
     {
         id: "p1",
         title: "Clean Green",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Romaine, Celery, Kale, Cucumber, and Apple",
         price: 7.00
     }, {
         id: "p2",
         title: "The Martian",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Romaine, Apple, Pineapple",
         price: 7.00
     }, {
         id: "p3",
         title: "Love Potion",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Beet, Strawberries, Watermelon",
         price: 7.00
     }, {
         id: "p4",
         title: "Valley Girl",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Lemon, Lime, Grapefruit, Orange, Pineapple",
         price: 7.00
     }, {
         id: "p5",
         title: "SA Punch",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Watermelon, Pineapple, Grapefruit, Ginger,Beets",
         price: 7.00
     }, {
         id: "p6",
         title: "Tanga",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Pineapple, Cucumber,Lime",
         price: 7.00
     }, {
         id: "p7",
         title: "Summer Water",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Pineapple, Watermelon, Mint",
         price: 7.00
     }, {
         id: "p8",
         title: "The Money",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Kale, Ginger, Apple",
         price: 7.00
     }, {
         id: "p9",
         title: "Slim Thick",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Lorem Ipsum",
         price: 7.00
     }, {
         id: "p10",
         title: "Slim Thick",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Lorem Ipsum",
         price: 7.00
     }, {
         id: "p11",
         title: "Slim Thick",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Lorem Ipsum",
         price: 7.00
     }, {
         id: "p12",
         title: "Slim Thick",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Lorem Ipsum",
         price: 7.00
     }, {
         id: "p13",
         title: "Slim Thick",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Lorem Ipsum",
         price: 7.00
     }, {
         id: "p14",
         title: "Slim Thick",
-        imgPath: "../assets/Fruits@2x.png",
+        imgPath: "../assets/SAPunch.png",
         "bio": "Lorem Ipsum",
         price: 7.00
     }

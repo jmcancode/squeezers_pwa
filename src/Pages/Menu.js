@@ -24,17 +24,17 @@ function ProductsPage(props) {
                                     <li>
                                         <Card
                                             key={product.id}
-                                            className="card"
+                                            className="text-center border-0"
                                             style={{
-                                            padding: '15px'
+                                            padding: '55px'
                                         }}>
-                                            <Card.Img src={product.imgPath} alt={product.imgPath} variant='top'/>
-                                            <Card.Body>
+                                            <Card.Img src={product.imgPath} alt={product.imgPath} variant='top' className="cardImg"/>
+                                            <Card.Body className="cardBody">
                                                 <h5>{product.title}</h5>
                                                 <small>{product.bio}</small>
                                             </Card.Body>
 
-                                            <Card.Footer>
+                                            <Card.Footer className="cardFooter">
                                                 <div className="d-grid gap-2 p-2">
                                                     <button className="btn btn-dark">more info</button>
                                                 </div>
