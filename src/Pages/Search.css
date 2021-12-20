@@ -1,0 +1,28 @@
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.search {
+    margin: 5px;
+    margin-top: 2%;
+    
+}
+
+.results {
+    display: inline;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.list{
+    
+    background-color: #fff;
+}
+
+.cardWrapper {
+    
+}

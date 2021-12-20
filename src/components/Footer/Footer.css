@@ -1,0 +1,25 @@
+
+
+.Footer-Wrapper {
+    display: grid;
+}
+
+li {
+    list-style: none;
+
+}
+
+.footerLinks {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-dark {
+    background-color: #1c2450;
+}
+
+.btn-dark:hover {
+    background-color: #fff !important;
+    color: #1c2450 !important;
+    border-color: transparent !important;
+}

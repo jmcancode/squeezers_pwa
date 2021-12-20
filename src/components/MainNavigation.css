@@ -1,0 +1,40 @@
+header {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+.main-navigation {
+   height: 32vh;
+   background-image: url("../assets/navBackground.svg");    
+   background-repeat: no-repeat;
+   max-height: 100%;
+}
+
+.main-navigation nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.main-navigation ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-navigation li {
+    margin: 0 1rem;
+}
+
+.main-navigation a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #1c2450;
+    border-radius: 5px;
+}
+.main-navigation a:active,
+.main-navigation a:hover {
+    background: #1c2450;
+    color: #fff;
+}
