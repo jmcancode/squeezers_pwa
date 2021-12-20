@@ -1,15 +1,10 @@
-header {
-    height: 100%;
-    width: 100vw;
-  
-}
+
 .main-navigation {
     background-color: transparent;
     background-image: url("../assets/naviBackground.png");
     background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100vw;
     padding-top: 1.25%;
+
 }
 
 .main-navigation nav {

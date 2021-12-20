@@ -5,6 +5,7 @@ import "./Welcome.css"
 import Footer from '../components/Footer/Footer'
 import MainNavigation from '../components/MainNavigation'
 import heroImg from "../assets/Fruits@2x.png"
+import { Link } from 'react-router-dom'
 
 export default function WelcomePage() {
     return (
@@ -38,7 +39,7 @@ export default function WelcomePage() {
                         }}>Try our new flavors made from the season's most delicious produce!</small>
                     </div>
                     <div className='d-grid gap-2'>
-                        <button className='btn btn-dark'>
+                        <button as={Link} to='/menu' className='btn btn-dark'>
                             Give it a try!
                         </button>
                     </div>
@@ -50,8 +51,8 @@ export default function WelcomePage() {
                         width={100}
                         height={100}
                         style={{
-                        width: '75%',
-                        height: "70%"
+                        width: '65%',
+                        height: "80%"
                     }}/>
                 </div>
             </div>
