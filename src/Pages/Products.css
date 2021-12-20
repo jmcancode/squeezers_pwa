@@ -40,6 +40,11 @@
     height: auto;
 }
 
-Card {
+.card {
     height: 100%;
+}
+
+.moreInfo {
+    background-color: #d6d6d7;
+    color: #1c2450;
 }

@@ -30,21 +30,21 @@ function ProductsPage(props) {
                                         }}>
                                             <Card.Img src={product.imgPath} alt={product.imgPath} variant='top' className="cardImg"/>
                                             <Card.Body className="cardBody">
-                                                <h5>{product.title}</h5>
-                                                <small>{product.bio}</small>
+                                                <p style={{fontSize: '20px', color: "#1c2450"}}>{product.title}</p>
+                                                <small style={{textTransform: "lowercase", color: "#1c2450"}}>{product.bio}</small>
                                             </Card.Body>
 
                                             <Card.Footer className="cardFooter">
                                                 <div className="d-grid gap-2 p-2">
-                                                    <button className="btn btn-dark">more info</button>
+                                                    <button className="btn  rounded-pill moreInfo">more info</button>
                                                 </div>
                                                 <div className="d-grid gap-2 p-2">
                                                     <button
-                                                        className="btn btn-dark"
+                                                        className="btn btn-dark rounded-pill"
                                                         onClick={context
                                                         .addProductToCart
                                                         .bind(this, product)}>
-                                                        Add to Cart ${product.price}
+                                                        add to cart
                                                     </button>
                                                 </div>
                                             </Card.Footer>
