@@ -26,3 +26,14 @@
     justify-content: center;
     align-items: center;
 }
+
+/* small devices */
+@media(min-width: 576px){}
+/* Medium devices */
+@media(min-width: 768px){}
+/* Large devices */
+@media(min-width: 992px){}
+/* X-Large devices */
+@media(min-width: 1200px){}
+/* XX-Large devices */
+@media(min-width: 1400px){}

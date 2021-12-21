@@ -39,7 +39,7 @@ export default function WelcomePage() {
                         }}>Try our new flavors made from the season's most delicious produce!</small>
                     </div>
                     <div className='d-grid gap-2'>
-                        <button as={Link} to='/menu' className='btn btn-dark'>
+                        <button as={Link} to='/menu' className='btn btn-dark rounded-pill m-5 p-2'>
                             Give it a try!
                         </button>
                     </div>

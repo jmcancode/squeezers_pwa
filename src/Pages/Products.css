@@ -2,9 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, auto);    
-    padding: 10% 5%;
-    background-color: #fff;
-    
+    background-color: #fff;   
 }
 
 .products li {

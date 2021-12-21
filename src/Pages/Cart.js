@@ -47,7 +47,9 @@ function CartPage(props) {
                     </div>
                 </Fragment>
 }
-                <div style={{padding: '20px',}}>
+                <div style={{
+                    padding: '20px'
+                }}>
                     <div>
                         {context
                             .cart
@@ -55,7 +57,7 @@ function CartPage(props) {
                                 <li key={cartItem.id}>
                                     <div>
                                         <strong>{cartItem.title}</strong>
-                                         - ${cartItem.price}
+                                        - ${cartItem.price}
                                         ( {cartItem.quantity})
                                     </div>
                                     <div>
