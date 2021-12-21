@@ -3,7 +3,7 @@ import ShopContext from "../context/ShopContext";
 
 import MainNavigation from "../components/MainNavigation";
 import "./Cart.css";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
 import {NavLink} from "react-router-dom";
 import {BiTrash} from 'react-icons/bi'
 
@@ -76,7 +76,7 @@ function CartPage(props) {
                 </div>
 
             </main>
-            <Footer/>
+            {/* <Footer/> */}
         </React.Fragment>
     );
 }

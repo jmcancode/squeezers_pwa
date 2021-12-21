@@ -135,57 +135,43 @@ export default function Search() {
                             width: '100%'
                         }}/>
                     </div>
-                    <div className="list">
-                        <div className='results'>
-                            {filteredProduct.map(product => (
-                                <Fragment>
-                                    <div className="cardWrapper" key={product.id}>
-                                        <Card
-                                            className='text-center'
-                                            style={{
-                                            padding: '10px',
-                                            margin: '5px',
-                                            width: '100%',
-                                            height: '100%',
-                                            borderColor: 'transparent'
-                                        }}>
-                                            <Card.Img
-                                                src={process.env.PUBLIC_URL + product.imgPath}
-                                                variant="top"
-                                                alt={product.imgPath}
-                                                style={{
-                                                display: "block",
-                                                width: "100%"
-                                            }}/>
-                                            <Card.Body>
-                                                <h5>{product.title}</h5>
-                                                <p className="text-black">{product.bio}</p>
-                                            </Card.Body>
-                                            <Card.Footer
-                                                style={{
-                                                display: 'flex',
-                                                flexDirection: "row",
-                                                justifyContent: "space-between",
-                                                alignItems: "center",
-                                                backgroundColor: "transparent",
-                                                borderTopColor: "transparent"
-                                            }}>
-                                                <button className='btn btn-dark'>more info</button>
-                                                <button
-                                                    onClick={context
-                                                    .addProductToCart
-                                                    .bind(this, product)}className="btn btn-dark">
-                                                    Add to Cart
-                                                </button>
 
-                                            </Card.Footer>
-                                        </Card>
-                                    </div>
-                                </Fragment>
-                            ))}
-                        </div>
+                    <div className='results'>
+                        {filteredProduct.map(product => (
+                            <Fragment>
+                                <div key={product.id}>
+                                    <Card className='text-center resultCard'>
+                                        <Card.Img
+                                            src={process.env.PUBLIC_URL + product.imgPath}
+                                            variant="top"
+                                            alt={product.imgPath}/>
+                                        <Card.Body>
+                                            <h5>{product.title}</h5>
+                                            <p className="text-black">{product.bio}</p>
+                                        </Card.Body>
+                                        <Card.Footer
+                                            style={{
+                                            display: 'flex',
+                                            flexDirection: "row",
+                                            justifyContent: "space-between",
+                                            alignItems: "center",
+                                            backgroundColor: "transparent",
+                                            borderTopColor: "transparent"
+                                        }}>
+                                            <button className='btn btn-dark'>more info</button>
+                                            <button
+                                                onClick={context
+                                                .addProductToCart
+                                                .bind(this, product)}className="btn btn-dark">
+                                                Add to Cart
+                                            </button>
+
+                                        </Card.Footer>
+                                    </Card>
+                                </div>
+                            </Fragment>
+                        ))}
                     </div>
-                    <Footer/>
                 </Fragment>
             )}
         </ShopContext.Consumer>

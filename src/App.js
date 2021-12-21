@@ -9,7 +9,8 @@ import ProductsPage from "./Pages/Menu"
 import CartPage from "./Pages/Cart"
 import Search from './Pages/Search';
 import WelcomePage from './Pages/Welcome';
-
+// footer
+import Footer from './components/Footer/Footer';
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                     {/* profile */}
                     {/* 404 */}
                 </Routes>
+                <Footer/>
             </BrowserRouter>
         </GlobalState>
     );

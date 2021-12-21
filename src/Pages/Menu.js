@@ -3,7 +3,7 @@ import ShopContext from "../context/ShopContext";
 import MainNavigation from "../components/MainNavigation";
 import "./Products.css";
 import {Card} from "react-bootstrap";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
 
 function ProductsPage(props) {
     return (
@@ -55,7 +55,7 @@ function ProductsPage(props) {
                         </div>
 
                     </main>
-<Footer/>
+{/* <Footer/> */}
                 </React.Fragment>
             )}
         </ShopContext.Consumer>
