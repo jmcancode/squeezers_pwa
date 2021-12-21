@@ -46,12 +46,10 @@ export default function WelcomePage() {
                     <img
                         src={heroImg}
                         alt="heroImg"
-                        width={100}
-                        height={100}
-                        style={{
-                        width: '65%',
-                        height: "80%"
-                    }}/>
+                       className="right-image"
+                       width={100}
+                       height={100}
+                       />
                 </div>
             </div>
             <div>

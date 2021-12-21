@@ -29,11 +29,7 @@ function MainNavigation(props) {
                     <ul>
                         <li>
 
-                            <Image
-                                src={Logo}
-                                alt="logo"
-                                className="logo"
-                                />
+                            <Image src={Logo} alt="logo" className="logo"/>
 
                         </li>
                     </ul>
@@ -44,15 +40,9 @@ function MainNavigation(props) {
                         <li>
                             <NavLink to="/menu">menu</NavLink>
                         </li>
+
                         <li>
-                            <NavLink to="/welcome">rewards</NavLink>
-                        </li>
-                        <li>
-                            <AiOutlineSearch/>
-                            <NavLink to="/search">search</NavLink>
-                        </li>
-                        <li>
-                            <AiOutlineUser/>
+
                             <NavLink to="/welcome">log-in</NavLink>
                         </li>
                         <li>
@@ -61,8 +51,16 @@ function MainNavigation(props) {
 
                     </ul>
                 </nav>
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: "flex-end", marginRight: '15px'}}>
-                    <div style={{padding: '5px'}}>
+                <div
+                    style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: "flex-end",
+                    marginRight: '15px'
+                }}>
+                    <div style={{
+                        padding: '5px'
+                    }}>
                         <button className="btn btn-dark rounded-pill m-1">
                             order pick up
                         </button>

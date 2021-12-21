@@ -56,13 +56,17 @@
 }
 
 .logo {
-    width: "140px";
-    height: "65px";
-    object-fit: "contain";
+    padding: 9px;
+    margin-top: 1%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 /* small devices */
-@media(min-width: 576px) {}
+@media(min-width: 375px) {}
 /* Medium devices */
 @media(min-width: 768px) {}
 /* Large devices */

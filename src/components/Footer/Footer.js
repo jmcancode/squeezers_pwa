@@ -90,8 +90,16 @@ export default function Footer() {
                             <NavLink className="footerLinks" to="/welcome">careers</NavLink>
                         </li>
                         <li>
+                            <NavLink className="footerLinks" to="/welcome">rewards</NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="footerLinks" to={'/search'}>search</NavLink>
+                            
+                        </li>
+                        <li>
                             <NavLink className="footerLinks" to="/welcome">FAQ</NavLink>
                         </li>
+
                     </div>
 
                 </nav>

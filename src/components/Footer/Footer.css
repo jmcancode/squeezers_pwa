@@ -10,8 +10,11 @@
     background-image: url('../../assets/naviBack.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 30vh;
-    padding-top: 3%;
+    height: 25vh;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100vw;
 }
 
 .one {
