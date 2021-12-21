@@ -16,7 +16,7 @@ function ProductsPage(props) {
                         .reduce((count, curItem) => {
                             return count + curItem.quantity;
                         }, 0)}/>
-                    <main style={{paddingTop: '8%'}}>
+                    <main>
                         <div className="products">
                             {context
                                 .products

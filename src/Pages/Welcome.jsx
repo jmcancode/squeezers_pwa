@@ -5,14 +5,12 @@ import "./Welcome.css"
 import Footer from '../components/Footer/Footer'
 import MainNavigation from '../components/MainNavigation'
 import heroImg from "../assets/Fruits@2x.png"
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export default function WelcomePage() {
     return (
         <Fragment>
-            <div>
-                <MainNavigation/>
-            </div>
+            <MainNavigation/>
             <div className="hero">
                 <div className='left-side text-center'>
                     <div>

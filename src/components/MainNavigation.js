@@ -7,7 +7,8 @@ import {AiOutlineSearch, AiOutlineUser} from 'react-icons/ai'
 
 function MainNavigation(props) {
 
-    const [navBar, setNavBar] = useState(false)
+    const [navBar,
+        setNavBar] = useState(false)
 
     const changeBackground = () => {
         if (window.scrollY >= 100) {
@@ -31,11 +32,8 @@ function MainNavigation(props) {
                             <Image
                                 src={Logo}
                                 alt="logo"
-                                style={{
-                                width: "140px",
-                                height: "65px",
-                                objectFit: "contain"
-                            }}/>
+                                className="logo"
+                                />
 
                         </li>
                     </ul>
@@ -48,9 +46,6 @@ function MainNavigation(props) {
                         </li>
                         <li>
                             <NavLink to="/welcome">rewards</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/welcome">delivery</NavLink>
                         </li>
                         <li>
                             <AiOutlineSearch/>
@@ -66,10 +61,20 @@ function MainNavigation(props) {
 
                     </ul>
                 </nav>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: "flex-end", marginRight: '15px'}}>
+                    <div style={{padding: '5px'}}>
+                        <button className="btn btn-dark rounded-pill m-1">
+                            order pick up
+                        </button>
+                        <button className="btn btn-secondary rounded-pill m-1">
+                            order delivery
+                        </button>
+                    </div>
+                </div>
             </div>
+
         </Fragment>
     )
 };
-
 
 export default MainNavigation;

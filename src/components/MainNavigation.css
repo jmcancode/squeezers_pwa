@@ -1,24 +1,23 @@
 .main-navigation {
     background-color: #fff;
     background-repeat: no-repeat;
-    padding-top: 1%;
     background-size: cover;
     position: sticky;
-    top: 0%;
-    width: 100%; 
+    top: 0;
+    width: 100%;
     z-index: 999;
+    padding-top: 1.45%;
 }
 
 .main-navigation.active {
-    background-color: rgb(255,255,255, .99);
+    background-color: rgb(255,255,255, .97);
     background-repeat: no-repeat;
-    padding-top: 1%;
-    background-size: contain;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 5px;   
+    background-size: cover;
+    top: 0;
     position: sticky;
+    width: 100%;
+    z-index: 999;
+    padding-top: 1.45%;
 }
 
 .main-navigation nav {
@@ -26,8 +25,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    
-    overflow: visible;
 }
 
 .main-navigation ul {
@@ -58,14 +55,19 @@
     color: #fff;
 }
 
+.logo {
+    width: "140px";
+    height: "65px";
+    object-fit: "contain";
+}
 
 /* small devices */
-@media(min-width: 576px){}
+@media(min-width: 576px) {}
 /* Medium devices */
-@media(min-width: 768px){}
+@media(min-width: 768px) {}
 /* Large devices */
-@media(min-width: 992px){}
+@media(min-width: 992px) {}
 /* X-Large devices */
-@media(min-width: 1200px){}
+@media(min-width: 1200px) {}
 /* XX-Large devices */
-@media(min-width: 1400px){}
+@media(min-width: 1400px) {}
