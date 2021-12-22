@@ -78,26 +78,26 @@ export default function Footer() {
                         alignItems: 'flex-start'
                     }}>
                         <li>
-                            <NavLink className="footerLinks" to="/welcome">our story</NavLink>
+                            <NavLink className="footerLinks" to="/">our story</NavLink>
                         </li>
                         <li>
-                            <NavLink className="footerLinks" to="/welcome">contact us</NavLink>
+                            <NavLink className="footerLinks" to="/">contact us</NavLink>
                         </li>
                         <li>
-                            <NavLink className="footerLinks" to="/welcome">legal</NavLink>
+                            <NavLink className="footerLinks" to="/">legal</NavLink>
                         </li>
                         <li>
-                            <NavLink className="footerLinks" to="/welcome">careers</NavLink>
+                            <NavLink className="footerLinks" to="/">careers</NavLink>
                         </li>
                         <li>
-                            <NavLink className="footerLinks" to="/welcome">rewards</NavLink>
+                            <NavLink className="footerLinks" to="/">rewards</NavLink>
                         </li>
                         <li>
                             <NavLink className="footerLinks" to={'/search'}>search</NavLink>
                             
                         </li>
                         <li>
-                            <NavLink className="footerLinks" to="/welcome">FAQ</NavLink>
+                            <NavLink className="footerLinks" to="/">FAQ</NavLink>
                         </li>
 
                     </div>

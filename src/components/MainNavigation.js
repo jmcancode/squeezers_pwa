@@ -1,5 +1,5 @@
 import React, {useState, Fragment} from "react";
-import {Image} from "react-bootstrap";
+import {Image, Button} from "react-bootstrap";
 import {NavLink} from "react-router-dom";
 import Logo from "../assets/SqueezersLogo.png"
 import "./MainNavigation.css";
@@ -43,32 +43,33 @@ function MainNavigation(props) {
 
                         <li>
 
-                            <NavLink to="/welcome">log-in</NavLink>
+                            <NavLink to="/">log-in</NavLink>
                         </li>
                         <li>
                             <NavLink to="/cart">cart ({props.cartItemNumber})</NavLink>
                         </li>
-
+                        <div
+                            style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: "flex-end",
+                            marginRight: '15px'
+                        }}>
+                            <div
+                                style={{
+                                padding: '5px'
+                            }}>
+                                <Button size="sm" className="btn-dark rounded-pill m-1">
+                                    order pick up
+                                </Button>
+                                <Button size="sm" className="btn-secondary rounded-pill m-1">
+                                    order delivery
+                                </Button>
+                            </div>
+                        </div>
                     </ul>
                 </nav>
-                <div
-                    style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: "flex-end",
-                    marginRight: '15px'
-                }}>
-                    <div style={{
-                        padding: '5px'
-                    }}>
-                        <button className="btn btn-dark rounded-pill m-1">
-                            order pick up
-                        </button>
-                        <button className="btn btn-secondary rounded-pill m-1">
-                            order delivery
-                        </button>
-                    </div>
-                </div>
+
             </div>
 
         </Fragment>

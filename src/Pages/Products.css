@@ -2,8 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, auto);    
-    background-color: #fff;   
-    margin-top: 5%;
+    background-color: #fff;
 }
 
 .products li {
