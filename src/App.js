@@ -12,16 +12,24 @@ import WelcomePage from './Pages/Welcome';
 // footer
 import Footer from './components/Footer/Footer';
 
-function App() {
+
+
+function App({context}) {
+    
     return (
         <GlobalState>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/welcome" element={<WelcomePage/> } exact/>
+                    <Route path="/" element={<WelcomePage/> } exact/>
                     <Route path="/menu" element={< ProductsPage />} exact/>
                     <Route path="/cart" element={< CartPage />} exact/>
                     <Route path="/search" element={< Search />} exact/>
-                    {/* rewards */}
+                    {/* about */} 
+                    {/* contact us  */} 
+                    {/* legal  */} 
+                    {/* careers */} 
+                    {/* FAQs */} 
+                    {/* rewards  */} 
                     {/* delivery */}
                     {/* profile */}
                     {/* 404 */}

@@ -1,16 +1,21 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useContext} from 'react'
 // custom css
 import "./Welcome.css"
 // custom components
 // import Footer from '../components/Footer/Footer'
 import MainNavigation from '../components/MainNavigation'
 import heroImg from "../assets/Fruits@2x.png"
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
+import ShopContext from '../context/ShopContext'
 
-export default function WelcomePage() {
+function WelcomePage(props) {
+    const context = useContext(ShopContext)
+
     return (
         <Fragment>
-            <MainNavigation/>
+            <MainNavigation cartItemNumber={context.cart.reduce((count, curItem) => {
+                return count + curItem.quantity
+            }, 0)}/>
             <div className="hero">
                 <div className='left-side text-center'>
                     <div>
@@ -37,9 +42,9 @@ export default function WelcomePage() {
                         }}>Try our new flavors made from the season's most delicious produce!</small>
                     </div>
                     <div className='d-grid gap-2'>
-                        <button as={Link} to='/menu' className='btn btn-dark rounded-pill m-5 p-2'>
+                        <NavLink to="/menu" style={{backgroundColor: "#1c2450", textDecoration: "none", color: "#fff", padding: '15px', borderRadius: "35px"}}>
                             Give it a try!
-                        </button>
+                        </NavLink>
                     </div>
                 </div>
                 <div className="right-side">
@@ -58,3 +63,4 @@ export default function WelcomePage() {
         </Fragment>
     )
 }
+export default WelcomePage;

@@ -3,7 +3,7 @@ import {Image} from "react-bootstrap";
 import {NavLink} from "react-router-dom";
 import Logo from "../assets/SqueezersLogo.png"
 import "./MainNavigation.css";
-import {AiOutlineSearch, AiOutlineUser} from 'react-icons/ai'
+// import {AiOutlineSearch, AiOutlineUser} from 'react-icons/ai'
 
 function MainNavigation(props) {
 
@@ -11,7 +11,7 @@ function MainNavigation(props) {
         setNavBar] = useState(false)
 
     const changeBackground = () => {
-        if (window.scrollY >= 100) {
+        if (window.scrollY >= 50) {
             setNavBar(true)
         } else {
             setNavBar(false)
@@ -29,13 +29,13 @@ function MainNavigation(props) {
                     <ul>
                         <li>
 
-                            <Image src={Logo} alt="logo" className="logo"/>
+                            <Image src={Logo} alt="logo" className="logo" width={100}/>
 
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <NavLink to="/welcome">home</NavLink>
+                            <NavLink to="/">home</NavLink>
                         </li>
                         <li>
                             <NavLink to="/menu">menu</NavLink>

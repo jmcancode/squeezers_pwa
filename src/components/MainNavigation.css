@@ -10,7 +10,7 @@
 }
 
 .main-navigation.active {
-    background-color: rgb(255,255,255, .97);
+    background-color: rgb(255,255,255, .98);
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;
@@ -56,7 +56,7 @@
 }
 
 .logo {
-    padding: 9px;
+    
     margin-top: 1%;
 }
 

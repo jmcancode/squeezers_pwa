@@ -23,7 +23,6 @@ function CartPage(props) {
                     return count + curItem.quantity;
                 }, 0)}/>
             <main className="cart">
-
                 {context.cart.length <= 0 && <Fragment>
                     <div
                         style={{
