@@ -3,6 +3,14 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, auto);    
     background-color: #fff;
+
+    @media only screen and (max-width: 800px){
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fill, auto);    
+        background-color: #fff;
+    }
+
 }
 
 .products li {
@@ -11,6 +19,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width: 800px){
+        border: 5px solid transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
@@ -38,13 +54,3 @@
 }
 
 
-/* small devices */
-@media(min-width: 576px){}
-/* Medium devices */
-@media(min-width: 768px){}
-/* Large devices */
-@media(min-width: 992px){}
-/* X-Large devices */
-@media(min-width: 1200px){}
-/* XX-Large devices */
-@media(min-width: 1400px){}

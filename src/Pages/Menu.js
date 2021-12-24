@@ -1,7 +1,7 @@
 import React from "react";
 import ShopContext from "../context/ShopContext";
 import MainNavigation from "../components/MainNavigation";
-import "./Products.css";
+import "./Products.scss";
 import {Card} from "react-bootstrap";
 // import Footer from "../components/Footer/Footer";
 

@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import {NavLink} from 'react-router-dom'
 // custom css
-import "../Footer/Footer.css"
+import "../Footer/Footer.scss"
 // react-icons
 import {AiFillFacebook, AiFillInstagram, AiFillTwitterSquare} from 'react-icons/ai'
 

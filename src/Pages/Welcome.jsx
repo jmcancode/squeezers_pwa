@@ -1,6 +1,6 @@
 import React, {Fragment, useContext} from 'react'
 // custom css
-import "./Welcome.css"
+import "./Welcome.scss"
 // custom components
 // import Footer from '../components/Footer/Footer'
 import MainNavigation from '../components/MainNavigation'
@@ -19,16 +19,8 @@ function WelcomePage(props) {
             <div className="hero">
                 <div className='left-side text-center'>
                     <div>
-                        <h3
-                            style={{
-                            color: "#A26038",
-                            fontSize: '20px'
-                        }}>New Autumn Flavors</h3>
-                        <h1
-                            style={{
-                            color: "#F4BE59",
-                            fontSize: '90px'
-                        }}>In-Season</h1>
+                        <h3 className='hero-title'>New Autumn Flavors</h3>
+                        <h1 className='hero-bigTitle'>In-Season</h1>
                     </div>
                     <div
                         style={{
