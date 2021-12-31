@@ -23,8 +23,8 @@ export default function Footer() {
                             display: 'flex',
                             flexDirection: "row",
                             justifyContent: 'space-around',
-                            alignItems: 'center',
-                            gap: '15px'
+                            alignItems: 'flex-start',
+                            gap: '15px',
                         }}>
                             <div>
                                 <p className='text-white'>iOS</p>
@@ -42,7 +42,7 @@ export default function Footer() {
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "center",
-                        alignItems: "center"
+                        alignItems: "flex-start"
                     }}>
                         <div>
                             <p className='text-white'>Connect with us</p>
@@ -70,15 +70,9 @@ export default function Footer() {
 
                 <nav className='three'>
 
-                    <div
-                        style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-around",
-                        alignItems: 'flex-start'
-                    }}>
+                    <div className="footer-container">
                         <li>
-                            <NavLink className="footerLinks" to="/">our story</NavLink>
+                            <NavLink className="footerLinks" to="/">our- story</NavLink>
                         </li>
                         <li>
                             <NavLink className="footerLinks" to="/">contact us</NavLink>

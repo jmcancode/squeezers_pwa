@@ -2,7 +2,7 @@ import React, {Fragment, useContext, useEffect} from "react";
 import ShopContext from "../context/ShopContext";
 
 import MainNavigation from "../components/MainNavigation";
-import "./Cart.css";
+import "./Cart.scss";
 // import Footer from "../components/Footer/Footer";
 import {NavLink} from "react-router-dom";
 import {BiTrash} from 'react-icons/bi'
@@ -32,8 +32,8 @@ function CartPage(props) {
                         justifyContent: 'center',
                         alignItems: "center"
                     }}>
-                        <p>Your cart is empty 🙁</p>
-                        <button className="btn btn-dark">
+                        <p>Your cart is empty 🥝 🍌</p>
+                        <button className="btn btn-dark explore">
                             <NavLink
                                 style={{
                                 textDecoration: "none",
