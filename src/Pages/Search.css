@@ -3,9 +3,8 @@
 }
 
 .search {
-    background-color: rgb(255,255,255, 0.99);
-    background-color: transparent;
-    color: #fff;
+    background-color: #1c2450;
+    color: #d6d6d8;
     border-color: transparent transparent #fff transparent;
 }
 
@@ -32,5 +31,5 @@
 
 .searchResults {
     height: 100vh;
-    background-color: rgb(255,255,255, 0.99);
+    background-color: rgb(255,255,255, 0.96);
 }

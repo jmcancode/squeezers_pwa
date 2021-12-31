@@ -1,18 +1,15 @@
-import React, {useState, Fragment} from "react";
-import {Button} from "react-bootstrap";
+import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
 import "./MainNavigation.scss";
-// import {AiOutlineSearch, AiOutlineUser} from 'react-icons/ai'
+// react-bootstrap components
+import { Nav, Container, Navbar} from 'react-bootstrap'
 
 function MainNavigation(props) {
     const [logo,
         setLogo] = useState(false);
     const [navBar,
         setNavBar] = useState(false);
-        const [toggleState, setToggleState] = useState(false);
-        const toggle = () => {
-          setToggleState(toggleState === false ? true : false);
-        };
+
     const changeBackground = () => {
         if (window.scrollY >= 50) {
             setNavBar(true)
@@ -33,55 +30,49 @@ function MainNavigation(props) {
     window.addEventListener('scroll', changeLogoColor)
 
     return (
-        <Fragment>
-            <header
-                className={navBar
-                ? 'main-navigation active'
-                : 'main-navigation'}>
-                <div
-                    className={logo
-                    ? 'logo active'
-                    : 'logo'}/>
-                <nav>
-                <i className="fa fa-bars" aria-hidden="true" onClick={toggle} />
-                    <ul className={`collapsed ${toggleState ? "is-expanded" : ""}`}>
-                        <li>
-                            <NavLink activeClassName="active" onClick={toggle} to="/">home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink activeClassName="active" onClick={toggle} to="/menu">menu</NavLink>
-                        </li>
-
-                        <li>
-
-                            <NavLink activeClassName="active" onClick={toggle} to="/">log-in</NavLink>
-                        </li>
-                        <li>
-                            <NavLink activeClassName="active" onClick={toggle} to="/cart">cart ({props.cartItemNumber})</NavLink>
-                        </li>
+        <Navbar
+            sticky="top"
+            className={navBar
+            ? 'main-navigation active'
+            : 'main-navigation'}
+            collapseOnSelect
+            expand="lg">
+            <Container>
+                <Navbar.Brand>
+                    <NavLink to="/">
                         <div
-                            style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: "flex-end",
-                            marginRight: '15px'
-                        }}>
-                            <div
-                                style={{
-                                padding: '5px'
-                            }}>
-                                <Button size="sm" className="btn-dark rounded-pill m-1">
-                                    order pick up
-                                </Button>
-                                <Button size="sm" className="btn-secondary rounded-pill m-1">
-                                    order delivery
-                                </Button>
-                            </div>
-                        </div>
-                    </ul>
-                </nav>
-            </header>
-        </Fragment>
+                            className={logo
+                            ? 'logo active'
+                            : 'logo'}/>
+                    </NavLink>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mx-auto">
+                        <Nav.Link></Nav.Link>
+                    </Nav>
+                    <Nav >
+                        <Nav.Link>
+                            <NavLink to="/menu">
+                                Menu
+                            </NavLink>
+                        </Nav.Link>
+                        <Nav.Link>Pickup</Nav.Link>
+                        <Nav.Link>Delivery</Nav.Link>
+                        <Nav.Link eventKey={2} href="#memes">
+                            Account
+                        </Nav.Link>
+                        <Nav.Link>
+                        <NavLink to="/cart">
+                                Cart  </NavLink>
+                                ({props.cartItemNumber})
+                           
+                        </Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+
     )
 };
 
