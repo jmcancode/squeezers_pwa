@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <Fragment>
             <nav className="footerWrapper">
-                <nav className='one'>
+                {/* <nav className='one'>
                     <div
                         style={{
                         display: "flex",
@@ -34,25 +34,18 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                </nav>
-                <nav className='two'>
+                </nav> */}
+                <nav className='one'>
 
-                    <div
-                        style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        alignItems: "flex-start"
-                    }}>
-                        <div>
+                    <div>
+                        <div className='text-center'>
                             <p className='text-white'>Connect with us</p>
                         </div>
                         <div
                             style={{
                             display: 'flex',
                             flexDirection: "row",
-                            justifyContent: "space-evenly",
-                            gap: '15px'
+                            justifyContent: "space-around",
                         }}>
                             <div>
                                 <AiFillFacebook size={25} color='#fff'/>

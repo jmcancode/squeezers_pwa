@@ -18,7 +18,7 @@ function App({context}) {
         <GlobalState>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={< WelcomePage />} exact/>
+                <Route index path="/" element={< WelcomePage />} exact/>
                 <Route path="/menu" element={< ProductsPage />} exact/>
                 <Route path="/cart" element={< CartPage />} exact/>
                 <Route path="/search" element={< Search />} exact/> {/* about */}
