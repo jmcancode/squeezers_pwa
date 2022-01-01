@@ -53,7 +53,7 @@ function MainNavigation(props) {
                     </Nav>
                     <Nav >
                         <Nav.Link>
-                            <NavLink to="/menu">
+                            <NavLink to="/products">
                                 Menu
                             </NavLink>
                         </Nav.Link>

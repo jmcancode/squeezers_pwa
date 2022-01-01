@@ -3,9 +3,16 @@ import ShopContext from "../context/ShopContext";
 import MainNavigation from "../components/MainNavigation";
 import "./Products.scss";
 import {Card} from "react-bootstrap";
-// import Footer from "../components/Footer/Footer";
+
+import {useNavigate} from 'react-router-dom'
 
 function ProductsPage(props) {
+
+    let navigate = useNavigate();
+
+    const onClick = (products) => {
+    navigate(`:${products.id}`)
+}
     return (
         <ShopContext.Consumer>
             {context => (
@@ -21,7 +28,7 @@ function ProductsPage(props) {
                             {context
                                 .products
                                 .map(product => (
-                                    <li>
+                                    <li key={product.id}>
                                         <Card
                                             key={product.id}
                                             className="text-center border-0"
@@ -36,7 +43,9 @@ function ProductsPage(props) {
 
                                             <Card.Footer className="cardFooter">
                                                 <div className="d-grid gap-2 p-2">
-                                                    <button className="btn  rounded-pill moreInfo">more info</button>
+                                                    <button
+                                                    onClick={onClick}
+                                                    className="btn  rounded-pill moreInfo">more info</button>
                                                 </div>
                                                 <div className="d-grid gap-2 p-2">
                                                     <button
@@ -53,9 +62,7 @@ function ProductsPage(props) {
                                     </li>
                                 ))}
                         </div>
-
                     </main>
-{/* <Footer/> */}
                 </React.Fragment>
             )}
         </ShopContext.Consumer>

@@ -3,7 +3,13 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, auto);    
     background-color: #fff;
-    @media only screen and (max-width: 800px){
+    @media only screen and (max-width: 768px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, auto);    
+        background-color: #fff;
+    }
+    @media only screen and (max-width: 375px){
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(auto-fill, auto);    
@@ -18,14 +24,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    @media only screen and (max-width: 800px){
-        border: 5px solid transparent;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+        // ipad screen
+        @media only screen and (max-width: 768px){
+            grid-column: repeat(auto, 1fr);
+            grid-row: repeat(autofill, auto);
+        }
+        // iphone screen
+        @media only screen and (max-width: 375px){}
 }
 
 

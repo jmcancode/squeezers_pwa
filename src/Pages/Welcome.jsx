@@ -1,11 +1,12 @@
 import React, {Fragment, useContext} from 'react'
 // custom css
 import "./Welcome.scss"
-// custom components
-// import Footer from '../components/Footer/Footer'
 import MainNavigation from '../components/MainNavigation'
+
 import heroImg from "../assets/Fruits@2x.png"
+
 import {NavLink} from 'react-router-dom'
+
 import ShopContext from '../context/ShopContext'
 
 function WelcomePage(props) {
@@ -29,12 +30,12 @@ function WelcomePage(props) {
                     }}>
                         <small
                             style={{
-                            fontSize: '12px',
+                            fontSize: '16px',
                             color: "#1c2450"
                         }}>Try our new flavors made from the season's most delicious produce!</small>
                     </div>
                     <div className='d-grid gap-2'>
-                        <NavLink to="/menu" style={{backgroundColor: "#1c2450", textDecoration: "none", color: "#fff", padding: '15px', borderRadius: "35px"}}>
+                        <NavLink to="/products" style={{backgroundColor: "#1c2450", textDecoration: "none", color: "#fff", padding: '15px', borderRadius: "35px"}}>
                             Give it a try!
                         </NavLink>
                     </div>
@@ -49,9 +50,6 @@ function WelcomePage(props) {
                        />
                 </div>
             </div>
-            {/* <div>
-                <Footer/>
-            </div> */}
         </Fragment>
     )
 }

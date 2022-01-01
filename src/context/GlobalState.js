@@ -4,8 +4,6 @@ import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT } from "./reducers";
 
 function GlobalState(props) {
   
-  
-  
   const products = [
     {
         id: "p1",
