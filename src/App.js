@@ -8,9 +8,10 @@ import ProductsPage from "./Pages/Menu"
 import CartPage from "./Pages/Cart"
 import Search from './Pages/Search';
 import WelcomePage from './Pages/Welcome';
+import JuiceDetailPage from './Pages/JuiceDetail';
+import FourOhFourPage from './Pages/404';
 // footer
 import Footer from './components/Footer/Footer';
-import JuiceDetailPage from './Pages/JuiceDetail';
 
 function App({context}) {
     const [user,
@@ -32,8 +33,8 @@ function App({context}) {
                     <Route path="/products" element={< ProductsPage />}/>
                     <Route path="/product/:id" element={JuiceDetailPage}/>
                     <Route path="/cart" element={< CartPage />}/>
-                    <Route path="/search" element={< Search />}/> 
-                    {/* about */}
+                    <Route path="/search" element={< Search />}/>
+                    <Route path="*" element={< FourOhFourPage />}/> {/* about */}
                     {/* contact us  */}
                     {/* legal  */}
                     {/* careers */}

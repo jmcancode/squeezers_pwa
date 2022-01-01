@@ -39,7 +39,7 @@ function CartPage(props) {
                                 textDecoration: "none",
                                 color: "#fff"
                             }}
-                                to="/menu">
+                                to="/products">
                                 Explore our menu
                             </NavLink>
                         </button>
