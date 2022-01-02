@@ -3,16 +3,16 @@ import ShopContext from "../context/ShopContext";
 import MainNavigation from "../components/MainNavigation";
 import "./Products.scss";
 import {Card} from "react-bootstrap";
-
+// react-router
 import {useNavigate} from 'react-router-dom'
-
+import {Helmet} from "react-helmet";
 function ProductsPage(props) {
 
     let navigate = useNavigate();
 
     const onClick = (products) => {
-    navigate(`:${products.id}`)
-}
+        navigate(`:${products.id}`)
+    }
     return (
         <ShopContext.Consumer>
             {context => (
@@ -23,6 +23,11 @@ function ProductsPage(props) {
                         .reduce((count, curItem) => {
                             return count + curItem.quantity;
                         }, 0)}/>
+                    <Helmet>
+                        <title>Juices | Juice Bar San Antonio</title>
+                        <meta name="description" content="All of our juices are made fresh with local produce."/>
+                    </Helmet>
+
                     <main>
                         <div className="products">
                             {context
@@ -33,19 +38,30 @@ function ProductsPage(props) {
                                             key={product.id}
                                             className="text-center border-0"
                                             style={{
-                                            padding: '55px', backgroundColor: "transparent"
+                                            padding: '55px',
+                                            backgroundColor: "transparent"
                                         }}>
-                                            <Card.Img src={product.imgPath} alt={product.imgPath} variant='top' className="cardImg"/>
+                                            <Card.Img
+                                                src={product.imgPath}
+                                                alt={product.imgPath}
+                                                variant='top'
+                                                className="cardImg"/>
                                             <Card.Body className="cardBody">
-                                                <p style={{fontSize: '20px', color: "#1c2450"}}>{product.title}</p>
-                                                <small style={{textTransform: "lowercase", color: "#1c2450"}}>{product.bio}</small>
+                                                <p
+                                                    style={{
+                                                    fontSize: '20px',
+                                                    color: "#1c2450"
+                                                }}>{product.title}</p>
+                                                <small
+                                                    style={{
+                                                    textTransform: "lowercase",
+                                                    color: "#1c2450"
+                                                }}>{product.bio}</small>
                                             </Card.Body>
 
                                             <Card.Footer className="cardFooter">
                                                 <div className="d-grid gap-2 p-2">
-                                                    <button
-                                                    onClick={onClick}
-                                                    className="btn  rounded-pill moreInfo">more info</button>
+                                                    <button onClick={onClick} className="btn  rounded-pill moreInfo">more info</button>
                                                 </div>
                                                 <div className="d-grid gap-2 p-2">
                                                     <button

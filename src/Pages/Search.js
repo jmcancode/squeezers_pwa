@@ -5,6 +5,7 @@ import './Search.css'
 // custom utils
 import Scroll from "../utils/Scroll"
 import SearchList from '../utils/SearchList';
+import Helmet from 'react-helmet';
 const product = [
     {
         id: "p1",
@@ -135,7 +136,12 @@ export default function Search() {
                         .reduce((count, curItem) => {
                             return count + curItem.quantity;
                         }, 0)}/>
-
+                    <Helmet>
+                        <title>Search juices, smoothies, bowls</title>
+                        <meta
+                            name="description"
+                            content="Search our menu for the latest juices, smoothies, and bowls made fresh daily with local produce. Visit us at our downtown San Antonio, Texas location."/>
+                    </Helmet>
                     <div className="search-wrapper">
                         <input
                             className='search'

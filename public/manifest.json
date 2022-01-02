@@ -1,7 +1,7 @@
 {
   "short_name": "Squeezers",
   "name": "Squeezers Juice Bar",
-  "description": "Squeezers juice bar is located in Downtown San Antonio, Texas.",
+  "description": "Squeezers juice bar is located in Downtown San Antonio, Texas. We use local product and make our juices, smoothies, and bowls in house daily.",
   "id": "/",
   "icons": [
     {
@@ -23,5 +23,5 @@
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#1c2450"
 }

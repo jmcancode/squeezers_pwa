@@ -1,5 +1,5 @@
 .hero {
-    height: 90vh;
+    height: 100%;
     background-color: rgb(255,255,255, 0.79);
     width: 100%;
     display: grid;
@@ -28,6 +28,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    @media only screen and (max-width: 375px){
+        justify-content: flex-start;
+        padding-top: 14%;
     }
 }
 
