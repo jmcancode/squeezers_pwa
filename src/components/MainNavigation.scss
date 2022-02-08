@@ -3,7 +3,7 @@
     top: 0;
     width: 100%;
     z-index: 999;
-    height: 100px !important;
+    
 }
 .main-navigation.active {
     background-color: rgb(255,255,255, 0.96) !important;
@@ -34,11 +34,6 @@
     text-decoration: none;
     border-radius: 5px;
 }
-.main-navigation.active a:active,
-.main-navigation.active a:hover {
-    background: #1c2450 !important;
-    color: #fff !important;
-}
 
 .logo {
     background-repeat: no-repeat;
@@ -57,4 +52,15 @@
 a.nav-link {
     letter-spacing: 1.25px !important;
     font-weight: 400;
+}
+
+.container {
+    width: 90vw !important;
+    margin: 10   !important;
+    padding:10 !important;
+}
+
+.navbar {
+    padding-top: 0px !important;
+    flex-wrap: nowrap !important;
 }
