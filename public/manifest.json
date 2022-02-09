@@ -20,6 +20,7 @@
       "sizes": "512x512"
     }
   ],
+  "gcm_sender_id": "772455392095",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",

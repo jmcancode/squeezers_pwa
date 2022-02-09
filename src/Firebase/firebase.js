@@ -2,9 +2,10 @@
 // Read more at https://firebase.google.com/docs/cloud-messaging/js/client && https://firebase.google.com/docs/cloud-messaging/js/receive
 
 import { initializeApp } from 'firebase/app';
-import { getMessaging, getToken, onMessage } from 'firebase/messaging';
+import { getToken, onMessage } from 'firebase/messaging';
+import { getMessaging } from 'firebase/messaging/sw';
 
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY ,
     authDomain: process.env.REACT_AUTH_DOMAIN,
     projectId: process.env.REACT_APP_PROJECT_ID,
@@ -19,7 +20,7 @@ initializeApp(firebaseConfig);
 const messaging = getMessaging();
 
 export const requestForToken = () => {
-  return getToken(messaging, { vapidKey: `REPLACE_WITH_YOUR_VAPID_KEY` })
+  return getToken(messaging, { vapidKey: 'BLU6XZGuhvlBBePBP18cnPuRArmouyxvTie7aMATJYREfmx6dV_LtovSOzDEqa3yBhEJVvyJq8jIqG4Mk3KAjfw' })
     .then((currentToken) => {
       if (currentToken) {
         console.log('current token for client: ', currentToken);
@@ -34,9 +35,6 @@ export const requestForToken = () => {
     });
 };
 
-// Handle incoming messages. Called when:
-// - a message is received while the app has focus
-// - the user clicks on an app notification created by a service worker `messaging.onBackgroundMessage` handler.
 export const onMessageListener = () =>
   new Promise((resolve) => {    
     onMessage(messaging, (payload) => {

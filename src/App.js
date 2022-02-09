@@ -30,6 +30,7 @@ function App({context}) {
     return (
         <GlobalState>
             <BrowserRouter>
+            <Notification/>
                 <Routes>
                     <Route index path="/" element={< WelcomePage />}/>
                     <Route path="products" element={< ProductsPage />}/>
@@ -48,7 +49,7 @@ function App({context}) {
                     {/* 404 */}
                 </Routes>
                 <Footer/>
-                <Notification/>
+                
             </BrowserRouter>
         </GlobalState>
     );

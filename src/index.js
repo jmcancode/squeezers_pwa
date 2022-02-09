@@ -10,4 +10,4 @@ ReactDOM.render(<App/>, document.getElementById('root'));
 
 serviceWorkerRegistration.register();
 
-reportWebVitals(() => console.log(reportWebVitals));
+reportWebVitals();
