@@ -1,10 +1,6 @@
 .juice-wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(autofill, auto);
-    background-color: #fff;
-    // ipad screen
-    @media only screen and (max-width: 768px){}
-    // iphone screen
-    @media only screen and (max-width: 375px){}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

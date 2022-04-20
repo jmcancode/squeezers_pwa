@@ -1,7 +1,5 @@
 import React, {Fragment, useContext, useEffect} from "react";
 import ShopContext from "../context/ShopContext";
-
-import MainNavigation from "../components/MainNavigation";
 import "./Cart.scss";
 // import Footer from "../components/Footer/Footer";
 import {NavLink} from "react-router-dom";
@@ -16,12 +14,7 @@ function CartPage(props) {
 
     return (
         <React.Fragment>
-            <MainNavigation
-                cartItemNumber={context
-                .cart
-                .reduce((count, curItem) => {
-                    return count + curItem.quantity;
-                }, 0)}/>
+           
             <main className="cart">
                 {context.cart.length <= 0 && <Fragment>
                     <div

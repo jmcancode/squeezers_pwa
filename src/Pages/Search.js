@@ -1,5 +1,4 @@
 import React, {Fragment, useState} from 'react'
-import MainNavigation from '../components/MainNavigation'
 import ShopContext from '../context/ShopContext';
 import './Search.css'
 // custom utils
@@ -130,12 +129,7 @@ export default function Search() {
                     height: '90vh'
                 }}>
 
-                    <MainNavigation
-                        cartItemNumber={context
-                        .cart
-                        .reduce((count, curItem) => {
-                            return count + curItem.quantity;
-                        }, 0)}/>
+                   
                     <Helmet>
                         <title>Search juices, smoothies, bowls</title>
                         <meta

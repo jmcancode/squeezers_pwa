@@ -64,3 +64,13 @@ a.nav-link {
     padding-top: 0px !important;
     flex-wrap: nowrap !important;
 }
+
+.navbar::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 99%;
+    background-image: url('../assets/navBackground-01.svg');
+    background-repeat: repeat-x;
+    width: 100vw;
+}

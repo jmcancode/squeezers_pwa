@@ -1,28 +1,25 @@
 import React from "react";
 import ShopContext from "../context/ShopContext";
-import MainNavigation from "../components/MainNavigation";
 import "./Products.scss";
 import {Card} from "react-bootstrap";
 // react-router
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Outlet} from 'react-router-dom'
 import {Helmet} from "react-helmet";
+
+
+
 function ProductsPage(props) {
 
     let navigate = useNavigate();
 
     const onClick = (products) => {
-        navigate(`:${products.id}`)
+        navigate(`/:${products.id}`)
     }
+    
     return (
         <ShopContext.Consumer>
             {context => (
                 <React.Fragment>
-                    <MainNavigation
-                        cartItemNumber={context
-                        .cart
-                        .reduce((count, curItem) => {
-                            return count + curItem.quantity;
-                        }, 0)}/>
                     <Helmet>
                         <title>Juices | Juice Bar San Antonio</title>
                         <meta name="description" content="All of our juices are made fresh with local produce."/>
@@ -78,6 +75,7 @@ function ProductsPage(props) {
                                     </li>
                                 ))}
                         </div>
+                        <Outlet/>
                     </main>
                 </React.Fragment>
             )}

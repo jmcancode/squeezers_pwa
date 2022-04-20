@@ -1,26 +1,18 @@
-import React, {Fragment, useContext} from 'react'
+import React, {Fragment} from 'react'
 // custom css
 import "./Welcome.scss"
-import MainNavigation from '../components/MainNavigation'
-
 import heroImg from "../assets/Fruits@2x.png"
-
 import {NavLink} from 'react-router-dom'
 
-import ShopContext from '../context/ShopContext'
-
 function WelcomePage(props) {
-    const context = useContext(ShopContext)
-
+  
     return (
         <Fragment>
-            <MainNavigation cartItemNumber={context.cart.reduce((count, curItem) => {
-                return count + curItem.quantity
-            }, 0)}/>
+           
             <div className="hero">
                 <div className='left-side text-center'>
                     <div>
-                        <h3 className='hero-title'>New Autumn Flavors</h3>
+                        <h3 className='hero-title'>New Spring Flavors</h3>
                         <h1 className='hero-bigTitle'>In-Season</h1>
                     </div>
                     <div

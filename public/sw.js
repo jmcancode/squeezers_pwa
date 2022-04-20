@@ -15,7 +15,7 @@ const firebaseConfig = {
 
 async function registerServiceWorker(messaging) {
     if ('serviceWorker' in navigator) {
-        const registration = await navigator.serviceWorker.register('/serviceWorker.js');
+        const registration = await navigator.serviceWorker.register('/serviceWorkerRegistration.js');
         messaging.useServiceWorker(registration);
     }
 }
@@ -42,3 +42,4 @@ messaging.onBackgroundMessage(function(payload) {
         .registration
         .showNotification(notificationTitle, notificationOptions);
 });
+
