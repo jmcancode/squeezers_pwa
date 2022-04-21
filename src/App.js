@@ -5,15 +5,15 @@ import {Route, Routes} from 'react-router-dom'
 import GlobalState from "./context/GlobalState"
 // pages
 import ProductsPage from "./Pages/Menu"
-import CartPage from "./Pages/Cart"
+import Checkout from "./components/checkout/checkout-component"
 import Search from './Pages/Search';
 import WelcomePage from './Pages/Welcome';
 import JuiceDetailPage from './Pages/JuiceDetail';
 import FourOhFourPage from './Pages/404';
 import Footer from './components/Footer/Footer';
-// import Notification from './Firebase/Notifications';
+// custom components
 import MainNavigation from './components/MainNavigation';
-import SignIn from "./components/Auth/sign-in-component";
+import Authentication from './components/Auth/authentication/authentication.component.jsx'
 
 
 function App({context}) {
@@ -34,15 +34,14 @@ function App({context}) {
 
     return (
         <GlobalState>
-            {/* <Notification/> */}
             <Routes>
                 <Route path="/" element={< MainNavigation />}>
                     <Route index element={< WelcomePage />}/>
                     <Route path="products" element={< ProductsPage />}>
                         <Route path=":id/*" element={< JuiceDetailPage />}/>
                     </Route>
-                    <Route path="sign-in" element={<SignIn/>}/>
-                    <Route path="cart" element={< CartPage />}/>
+                    <Route path="auth" element={<Authentication/>}/>
+                    <Route path="cart" element={< Checkout />}/>
                     <Route path="search" element={< Search />}/>
                     <Route path="*" element={< FourOhFourPage />}/>
                 </Route>

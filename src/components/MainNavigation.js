@@ -39,9 +39,7 @@ function MainNavigation(props) {
 
     return (
         <Fragment>
-            <Navbar cartItemNumber={context.cart.reduce((count, curItem) => {
-                return count + curItem.quantity
-            }, 0)}
+            <Navbar
                 sticky="top"
                 className={navBar
                 ? 'main-navigation active'
@@ -68,10 +66,8 @@ function MainNavigation(props) {
                                     Menu
                                 </NavLink>
                             </Nav.Link>
-                            <Nav.Link>Pickup</Nav.Link>
-                            <Nav.Link>Delivery</Nav.Link>
                             <Nav.Link eventKey={2}>
-                                <NavLink to="/sign-in">
+                                <NavLink to="/auth">
                                     Account
                                 </NavLink>
                             </Nav.Link>
@@ -79,8 +75,6 @@ function MainNavigation(props) {
                                 <NavLink to="/cart">
                                     Cart
                                 </NavLink>
-                                ({props.cartItemNumber})
-
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

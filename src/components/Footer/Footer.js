@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <Fragment>
             <nav className="footerWrapper">
-                {/* <nav className='one'>
+                <nav className='one'>
                     <div
                         style={{
                         display: "flex",
@@ -24,7 +24,7 @@ export default function Footer() {
                             flexDirection: "row",
                             justifyContent: 'space-around',
                             alignItems: 'flex-start',
-                            gap: '15px',
+                            gap: '10px'
                         }}>
                             <div>
                                 <p className='text-white'>iOS</p>
@@ -34,8 +34,8 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                </nav> */}
-                <nav className='one'>
+                </nav>
+                <nav className='two'>
 
                     <div>
                         <div className='text-center'>
@@ -45,7 +45,7 @@ export default function Footer() {
                             style={{
                             display: 'flex',
                             flexDirection: "row",
-                            justifyContent: "space-around",
+                            justifyContent: "space-around"
                         }}>
                             <div>
                                 <AiFillFacebook size={25} color='#fff'/>
@@ -64,34 +64,28 @@ export default function Footer() {
                 <nav className='three'>
 
                     <div className="footer-container">
-                        <li>
-                            <NavLink className="footerLinks" to="/">our- story</NavLink>
-                        </li>
-                        <li>
-                            <NavLink className="footerLinks" to="/">contact us</NavLink>
-                        </li>
-                        <li>
-                            <NavLink className="footerLinks" to="/">legal</NavLink>
-                        </li>
-                        <li>
-                            <NavLink className="footerLinks" to="/">careers</NavLink>
-                        </li>
-                        <li>
-                            <NavLink className="footerLinks" to="/">rewards</NavLink>
-                        </li>
-                        <li>
-                            <NavLink className="footerLinks" to={'/search'}>search</NavLink>
-                            
-                        </li>
-                        <li>
-                            <NavLink className="footerLinks" to="/">FAQ</NavLink>
-                        </li>
+
+                        <NavLink className="footerLinks" to="/">our- story</NavLink>
+
+                        <NavLink className="footerLinks" to="/">contact us</NavLink>
+
+                        <NavLink className="footerLinks" to="/">legal</NavLink>
+
+                        <NavLink className="footerLinks" to={'/search'}>search</NavLink>
+
+                        <NavLink className="footerLinks" to="/">FAQ</NavLink>
 
                     </div>
 
                 </nav>
                 <nav className='four'>
-                    <p>2022 All Rights Reserved Squuezers Co.</p>
+                    <p>2022 All Rights Reserved Squuezers Co. || Made with
+                        <span
+                            style={{
+                            padding: '5px'
+                        }}>❤️</span>
+                        by bboy-creative
+                    </p>
                 </nav>
             </nav>
 

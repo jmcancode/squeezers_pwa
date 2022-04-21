@@ -14,12 +14,6 @@
     top: 0;
 }
 
-.main-navigation a:active,
-.main-navigation a:hover {
-    background: #1c2450 !important;
-    color: #fff !important;
-}
-
 .main-navigation li {
     margin: 0 1rem;
 }
@@ -27,13 +21,12 @@
 .main-navigation a {
     text-decoration: none;
     color: #1c2450 !important;
-    border-radius: 5px;
 }
 
 .main-navigation.active a {
     text-decoration: none;
-    border-radius: 5px;
 }
+
 
 .logo {
     background-repeat: no-repeat;
@@ -50,7 +43,7 @@
 }
 
 a.nav-link {
-    letter-spacing: 1.25px !important;
+    letter-spacing: 1.20px !important;
     font-weight: 400;
 }
 
@@ -63,14 +56,4 @@ a.nav-link {
 .navbar {
     padding-top: 0px !important;
     flex-wrap: nowrap !important;
-}
-
-.navbar::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 99%;
-    background-image: url('../assets/navBackground-01.svg');
-    background-repeat: repeat-x;
-    width: 100vw;
 }
