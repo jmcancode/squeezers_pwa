@@ -5,6 +5,7 @@ import {Card} from "react-bootstrap";
 // react-router
 import {useNavigate, Outlet} from 'react-router-dom'
 import {Helmet} from "react-helmet";
+import AnimatedPage from "../AnimatedPage";
 
 
 
@@ -17,7 +18,8 @@ function ProductsPage(props) {
     }
     
     return (
-        <ShopContext.Consumer>
+        <AnimatedPage>
+            <ShopContext.Consumer>
             {context => (
                 <React.Fragment>
                     <Helmet>
@@ -80,6 +82,7 @@ function ProductsPage(props) {
                 </React.Fragment>
             )}
         </ShopContext.Consumer>
+        </AnimatedPage>
     );
 }
 

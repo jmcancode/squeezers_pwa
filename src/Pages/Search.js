@@ -5,6 +5,9 @@ import './Search.css'
 import Scroll from "../utils/Scroll"
 import SearchList from '../utils/SearchList';
 import Helmet from 'react-helmet';
+// animated
+import AnimatedPage from '../AnimatedPage';
+
 const product = [
     {
         id: "p1",
@@ -123,35 +126,39 @@ export default function Search() {
     }
 
     return (
-        <ShopContext.Consumer>
-            {context => (
-                <Fragment style={{
-                    height: '90vh'
-                }}>
-
-                   
-                    <Helmet>
-                        <title>Search juices, smoothies, bowls</title>
-                        <meta
-                            name="description"
-                            content="Search our menu for the latest juices, smoothies, and bowls made fresh daily with local produce. Visit us at our downtown San Antonio, Texas location."/>
-                    </Helmet>
-                    <div className="search-wrapper">
-                        <input
-                            className='search'
-                            type="text"
-                            placeholder='search names or ingredients'
-                            value={searchTerm}
-                            onChange={handleChange}
+        <Fragment>
+            <AnimatedPage>
+                <ShopContext.Consumer>
+                    {context => (
+                        <Fragment
                             style={{
-                            width: '100%'
-                        }}/>
-                    </div>
-                    <div className='searchResults'>
-                        {searchList()}
-                    </div>
-                </Fragment>
-            )}
-        </ShopContext.Consumer>
+                            height: '90vh'
+                        }}>
+
+                            <Helmet>
+                                <title>Search juices, smoothies, bowls</title>
+                                <meta
+                                    name="description"
+                                    content="Search our menu for the latest juices, smoothies, and bowls made fresh daily with local produce. Visit us at our downtown San Antonio, Texas location."/>
+                            </Helmet>
+                            <div className="search-wrapper">
+                                <input
+                                    className='search'
+                                    type="text"
+                                    placeholder='search names or ingredients'
+                                    value={searchTerm}
+                                    onChange={handleChange}
+                                    style={{
+                                    width: '100%'
+                                }}/>
+                            </div>
+                            <div className='searchResults'>
+                                {searchList()}
+                            </div>
+                        </Fragment>
+                    )}
+                </ShopContext.Consumer>
+            </AnimatedPage>
+        </Fragment>
     )
 }
