@@ -27,11 +27,15 @@ export default function Footer() {
                             gap: '10px'
                         }}>
                             <div>
+                                <small style={{color: "#fff"}}>Launching '22</small>
+                            </div>
+
+                            {/* <div>
                                 <p className='text-white'>iOS</p>
                             </div>
                             <div>
                                 <p className='text-white'>Android</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </nav>
@@ -65,13 +69,13 @@ export default function Footer() {
 
                     <div className="footer-container">
 
-                        <NavLink className="footerLinks" to="/">our- story</NavLink>
+                        <NavLink className="footerLinks" to="our-story">our- story</NavLink>
 
                         <NavLink className="footerLinks" to="/">contact us</NavLink>
 
-                        <NavLink className="footerLinks" to="/">legal</NavLink>
+                        <NavLink className="footerLinks" to="legal">legal</NavLink>
 
-                        <NavLink className="footerLinks" to={'/search'}>search</NavLink>
+                        <NavLink className="footerLinks" to='search'>search</NavLink>
 
                         <NavLink className="footerLinks" to="/">FAQ</NavLink>
 

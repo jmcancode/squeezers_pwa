@@ -1,6 +1,6 @@
 import React from 'react'
 // styles
-import "./out-story.scss"
+import "./our-story.scss"
 
 
 const OurStory = () => {
