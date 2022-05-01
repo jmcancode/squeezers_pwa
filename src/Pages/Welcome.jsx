@@ -30,7 +30,7 @@ function WelcomePage(props) {
                         </div>
                         <div className='d-grid gap-2'>
                             <NavLink
-                                to="/products"
+                                to="/home"
                                 style={{
                                 backgroundColor: "#1c2450",
                                 textDecoration: "none",

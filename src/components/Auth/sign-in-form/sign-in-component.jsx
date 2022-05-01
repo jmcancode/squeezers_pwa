@@ -1,20 +1,17 @@
 import {useState} from 'react';
 import {useDispatch} from "react-redux";
 import {useNavigate} from 'react-router-dom';
-import {signInAuthUserWithEmailAndPassword, signInWithGooglePopup} from '../../../Firebase/firebase';
 // custom styles
 import "./sign-in-form.scss"
 // component styles
 import FormInput from "../../form-input/form-input-component"
-import Button from "../../button/button-component"
+import Button, {BUTTON_TYPE_CLASSES} from "../../button/button-component"
 import {Alert} from 'react-bootstrap';
 // redux
 import {
     googleSignInStart,
     emailSignInStart,
   } from '../../../Store/user/user.action';
-
-
 
 
 
@@ -101,7 +98,7 @@ const SignInForm = () => {
                     value={password}/>
                 <div className='buttons-container'>
                     <Button disabled={loading} type='submit'>Sign In</Button>
-                    <Button buttonType='google' type='button' onClick={signInWithGoogle}>
+                    <Button  buttonType={BUTTON_TYPE_CLASSES.google} type='button' onClick={signInWithGoogle}>
                         Google Sign In
                     </Button>
                 </div>
